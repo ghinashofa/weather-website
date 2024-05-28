@@ -87,3 +87,29 @@
     background-clip: text;
     /* text-shadow: -4.2px 8.3px 51.4286px rgba(0, 0, 0, 0.1); */
 }
+
+/* ===== CARD ====== */
+.card {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    background: transparent;
+    margin-top: 80px;
+    margin-bottom: 130px;
+    gap: 32px;
+}
+
+.card-1{
+width: 168px;
+height: 269px;
+background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%);
+box-shadow: -5.14286px 10.2857px 41.1429px 3.08571px rgba(19, 35, 78, 0.2);
+border-radius: 14px;
+}
+
+.card-1 p{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
