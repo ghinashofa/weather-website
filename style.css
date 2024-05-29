@@ -6,6 +6,7 @@
 
 section{
     background-image: url(images/bg.svg);
+    background-repeat: no-repeat;
 }
 
 #up-content{
@@ -113,27 +114,27 @@ section{
     margin-top: 80px;
     padding: 0px 100px;
     padding-bottom: 130px;
-
+    gap: 18px;
 }
 
 .card-list{
-    width: 210px;
-    height: 240px;
+    width: 15.40%;
     background-image: url(images/card-bg.png);
-    box-sizing: border-box;
-    background-size: cover; /* atur agar gambar mengisi seluruh area card */
-  background-position: center; 
-    border-radius: 15px;
-    padding: 0;
-    box-shadow: -5.14286px 10.2857px 41.1429px 3.08571px rgba(19, 35, 78, 0.2); 
-    /* background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%); */
+    background-size: 150% 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    text-align: center;
+    padding: 40px 0px;
+    min-height: 300px;
 }
 
-.card-1 p{
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
+.card-list h3{
+    color: white;
+    font-family: "Overpass";
+    line-height: 20%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    text-shadow: -1.85429px 2.78143px 0.927143px rgba(0, 0, 0, 0.1);
 }
-
-
-

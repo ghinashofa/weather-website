@@ -19,34 +19,20 @@
             <div id="vector-hand">
                 <img src="images/vector-hand.svg" alt="">
             </div>
-            <p id="temperature">32℃</p>
+            <p id="temperature"></p>
+            <!-- 32℃ -->
         </div>
         <div id="date">
-            <input type="text" placeholder="search city">
+            <input id="inputSearch" type="text" placeholder="search city">
+            <button onclick="search()">
+                Search
+            </button>
             <h1>Jakarta</h1>
             <p>Monday 28 May 2024</p>
         </div>
-        <div class="card">
-            <div class="card-list">
-                <h3>Sunday</h3>
-            </div>
-            <div class="card-list">
-                <h3>Sunday</h3>
-            </div>
-            <div class="card-list">
-                <h3>Sunday</h3>
-            </div>
-            <div class="card-list">
-                <h3>Sunday</h3>
-            </div>
-            <div class="card-list">
-                <!-- <h3>Sunday</h3> -->
-            </div>
-            <div class="card-list">
-                <!-- <h3>Sunday</h3> -->
-            </div>
+        <div class="card" id="weatherDays">
         </div>
     </section>
 </body>
-<link rel="stylesheet" href="script.js">
+<script src="script.js"></script>
 </html>
