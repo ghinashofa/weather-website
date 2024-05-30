@@ -51,5 +51,14 @@ fetchData();
 function search() {
     let searchCity = document.getElementById("search-input").value;
     fetchData(searchCity);
+    kota(searchCity);
+}
+
+function fetchData(city){
+    console.log(`fetching data for ${city}`);
+}
+
+function kota(searchCity){
+    document.getElementById("nama-kota").innerHTML = searchCity;
 }
 

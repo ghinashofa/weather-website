@@ -70,11 +70,18 @@ section{
     text-align: center;
 }
 
-.search {
+.search-input-city {
     display: flex;
     align-items: center;
     padding: 14px;
     border-radius: 12px;
+    margin-bottom: 24px;
+    margin-left: 28px;
+}
+
+.search-icon{
+    border: none;
+    background: none;
 }
 
 #date h1{
