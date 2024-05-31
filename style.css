@@ -148,7 +148,7 @@ section{
     background-repeat: no-repeat;
     border-radius: 16px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 16px;
     padding-bottom: 40px;
     min-height: 290px;
 }
@@ -161,7 +161,7 @@ section{
     line-height: 36px;
     text-shadow: -1.85429px 2.78143px 0.927143px rgba(0, 0, 0, 0.1);
     margin-bottom: -20px;
-    margin-top: -16px;
+    margin-top: -10px;
 }
 
 .temp{
