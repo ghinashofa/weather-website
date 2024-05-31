@@ -29,7 +29,7 @@ section{
 }
 
 #up-content img{
-    margin-top: -170px;
+    margin-top: -180px;
     background-color: transparent;
     background: transparent;
 }
@@ -47,13 +47,13 @@ section{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: -4.11429px 8.22857px 51.4286px rgba(0, 0, 0, 0.1);
+    text-shadow: -8px 8px 50px rgba(0, 0, 0, 0.1);
 }
 
 #title-website p{
     padding-top: 24px;
     font-family: "Overpass";
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 600;
     background: #6D6D6D;
     -webkit-background-clip: text;
@@ -93,34 +93,20 @@ section{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: -8px 8px 50px rgba(0, 0, 0, 0.1);
 }
 
 #date p{
     padding-top: 8px;
     font-family: "Overpass";
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     background: #222222;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* text-shadow: -4.2px 8.3px 51.4286px rgba(0, 0, 0, 0.1); */
+    text-shadow: -22px 8.3px 100px rgba(0, 0, 0, 0.1);
 }
-
-/* #date form {
-
-
-    
-    padding: 10px 24px;
-    border: none;
-    background-color: #FADC3F;
-    border-radius: 30px;
-    margin-bottom: 30px;
-    color: #222222;
-    display: flex;
-    text-align: start;
-    justify-content: space-between;
-} */
 
 /* ======= INPUT SEARCH CITY =======  */
 .search-input-city {
@@ -141,32 +127,6 @@ section{
     padding: 4px 4px;
 }
 
-/* #date form input {
-    border: none;
-    padding: 10px 0px;
-    background: none;
-    color: #222222;
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    background-color: #FADC3F;
-    border-radius: 30px;
-    float: left;
-    width: 80%;
-}
-
-#date form button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; 
-    cursor: pointer;
-} */
-
 /* ===== CARD ====== */
 .card {
     box-sizing: border-box;
@@ -175,8 +135,8 @@ section{
     background-color: transparent;
     background: transparent;
     margin-top: 80px;
-    padding: 0px 100px;
-    padding-bottom: 130px;
+    padding: 0px 80px;
+    padding-bottom: 100px;
     gap: 18px;
 }
 
@@ -188,16 +148,77 @@ section{
     background-repeat: no-repeat;
     border-radius: 16px;
     text-align: center;
-    padding: 40px 0px;
-    min-height: 300px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    min-height: 290px;
 }
 
 .card-list h3{
     color: white;
     font-family: "Overpass";
-    line-height: 20%;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 36px;
     text-shadow: -1.85429px 2.78143px 0.927143px rgba(0, 0, 0, 0.1);
+    margin-bottom: -20px;
+    margin-top: -16px;
 }
+
+.temp{
+    background: rgba(255, 255, 255, 0.3);
+    filter: blur(0.1px);
+    padding: 2px 4px;
+    margin: 0px 24px;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 77px;
+    margin-top: -20px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-shadow: -3.70857px 7.41714px 46.3571px rgba(0, 0, 0, 0.1);
+
+}
+
+.date-cards{
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 80px;
+    color: #FFFFFF;
+    text-shadow: -3.70857px 7.41714px 46.3571px rgba(0, 0, 0, 0.1);
+    margin-top: -10px;
+    margin-bottom: 12px;
+}
+
+footer {
+    background: #F0F7FF;
+    margin-top: -20px;
+    color: #222222;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.designer {
+    /* opacity: 0.7; */
+    background: linear-gradient(192.05deg, #47BFDF 0%, #4A91FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
