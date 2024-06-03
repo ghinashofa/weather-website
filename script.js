@@ -39,14 +39,20 @@ async function fetchData(searchCity) { //mewakili pembuatan variabel
         const formattedDate = formatDate(date); 
         formattedDateCard += `<p>${formattedDate}</p>`; 
     });
-    
+
+	//Proses Menampilkan Nama - nama hari dalam seminggu
+	const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; //array untuk nama2 hari
+	const today = new Date(); //membuat objek 'date' yang berisi tanggal dan waktu saat ini
+    const currentDayIndex = today.getDay(); //Mengambil indeks hari saat ini (0 untuk Sunday, dll)
 
     //looping menampilkan weather card selama 7 hari//
     for(let i=0; i<data7Days.daily.time.length; i++){
+		const dayIndex = (currentDayIndex + i) % 7; //indeks hari saat ini yang diperoleh dari getDay() & operasi modulo memastikan bahwa hasil penjumlahan currentDayIndex + i selalu berada dalam rentang 0-6 /<7
+		const dayName = daysOfWeek[dayIndex]; //Mengambil nama hari dari array daysOfWeek menggunakan indeks yang dihitung.
         document.getElementById("weatherDays").innerHTML += 
             `<div class="card-list">
                 <img src=${wmo[data7Days.daily.weather_code[i]].day.image} width: 100px; alt="">
-                <h3>Sunday</h3>
+                <h3>${dayName}</h3>
                 <p class="date-cards">${data7Days.daily.time[i]}</p>
                 <p class="temp">${data7Days.daily.temperature_2m_max[i]}°C</p>
             </div>`
@@ -95,7 +101,6 @@ function fetchDataKota(city){
 function kota(searchCity){
     document.getElementById("nama-kota").innerHTML = searchCity; //menampilkan inputan user di id nama-kota
 }
-
 
 
 
