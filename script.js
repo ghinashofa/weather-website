@@ -73,13 +73,16 @@ async function fetchData(searchCity) { //mewakili pembuatan variabel
     const date = new Date(dateString); //konversi ke data object
     const options = { 
         weekday: 'long', 
+		// comma: ",",
         day: '2-digit', 
         month: 'long', 
         year: 'numeric' 
     }; //opsi untuk format date terbaru
 
     const formattedDate = date.toLocaleDateString('en-GB', options); // Format the date
-    document.getElementById('currentDate').innerHTML = formattedDate;
+	let dateSplitted = formattedDate.split(' ');
+	// console.log (dateSplitted[0] + ", " + dateSplitted[1] + " " + dateSplitted[2]+ " " + dateSplitted[3]);
+    document.getElementById('currentDate').innerHTML =  (dateSplitted[0] + ", " + dateSplitted[1] + " " + dateSplitted[2]+ " " + dateSplitted[3]);
 }
 
 fetchData();
