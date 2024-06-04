@@ -54,7 +54,10 @@ async function fetchData(searchCity) { //mewakili pembuatan variabel
                 <img src=${wmo[data7Days.daily.weather_code[i]].day.image} width: 100px; alt="">
                 <h3>${dayName}</h3>
                 <p class="date-cards">${data7Days.daily.time[i]}</p>
-                <p class="temp">${data7Days.daily.temperature_2m_max[i]}°C</p>
+				<div class="temp-cover">
+                	<p class="temp"> Max: <br> ${data7Days.daily.temperature_2m_max[i]}°C</p>
+                	<p class="temp">Min: <br> ${data7Days.daily.temperature_2m_min[i]}°C</p>
+				</div>
             </div>`
 
     }
