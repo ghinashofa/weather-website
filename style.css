@@ -172,6 +172,8 @@ section{
 }
 
 .temp{
+    width: 70px;
+    box-sizing: border-box;
     background: rgba(255, 255, 255, 0.3);
     filter: blur(0.1px);
     padding: 4px 10px;
