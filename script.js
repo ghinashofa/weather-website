@@ -20,8 +20,10 @@ async function fetchData(searchCity) { //mewakili pembuatan variabel
     let lat = dataSearch.coord.lat;
 
     const apiUrl7Days = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FBangkok`;
-    const response7Days = await fetch(apiUrl7Days); //Permintaan HTTP ke API untuk mendapatkan data cuaca
+    document.getElementById("loading").innerHTML = "Loading..";
+	const response7Days = await fetch(apiUrl7Days); //Permintaan HTTP ke API untuk mendapatkan data cuaca
     var data7Days = await response7Days.json();
+	document.getElementById("loading").innerHTML = "";
     
     // ===== Menampilkan  Tanggal Pada Setiap Card ===== //
     const dateString7Days = data7Days.daily.time; 
@@ -45,22 +47,22 @@ async function fetchData(searchCity) { //mewakili pembuatan variabel
 	const today = new Date(); //membuat objek 'date' yang berisi tanggal dan waktu saat ini
     const currentDayIndex = today.getDay(); //Mengambil indeks hari saat ini (0 untuk Sunday, dll)
 
-    //looping menampilkan weather card selama 7 hari//
-    for(let i=0; i<data7Days.daily.time.length; i++){
+	//looping menampilkan weather card selama 7 hari//
+	for(let i=0; i<data7Days.daily.time.length; i++){
 		const dayIndex = (currentDayIndex + i) % 7; //indeks hari saat ini yang diperoleh dari getDay() & operasi modulo memastikan bahwa hasil penjumlahan currentDayIndex + i selalu berada dalam rentang 0-6 /<7
 		const dayName = daysOfWeek[dayIndex]; //Mengambil nama hari dari array daysOfWeek menggunakan indeks yang dihitung.
-        document.getElementById("weatherDays").innerHTML += 
-            `<div class="card-list">
-                <img src=${wmo[data7Days.daily.weather_code[i]].day.image} width: 100px; alt="">
-                <h3>${dayName}</h3>
-                <p class="date-cards">${data7Days.daily.time[i]}</p>
+		document.getElementById("weatherDays").innerHTML += 
+			`<div class="card-list">
+				<img src=${wmo[data7Days.daily.weather_code[i]].day.image} width: 100px; alt="">
+				<h3>${dayName}</h3>
+				<p class="date-cards">${data7Days.daily.time[i]}</p>
 				<div class="temp-cover">
-                	<p class="temp"> Max: <br> ${data7Days.daily.temperature_2m_max[i]}°C</p>
-                	<p class="temp">Min: <br> ${data7Days.daily.temperature_2m_min[i]}°C</p>
+					<p class="temp"> Max <br> ${data7Days.daily.temperature_2m_max[i]}°C</p>
+					<p class="temp">Min <br> ${data7Days.daily.temperature_2m_min[i]}°C</p>
 				</div>
-            </div>`
+			</div>`
 
-    }
+	}
 
     // Menampilkan Suhu Saat ini //
     const apiUrlCurrent =`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m`;
