@@ -20,10 +20,10 @@ async function fetchData(searchCity) { //mewakili pembuatan variabel
     let lat = dataSearch.coord.lat;
 
     const apiUrl7Days = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FBangkok`;
-    document.getElementById("loading").innerHTML = "Loading..";
+    document.getElementById("loading").style.display = "block";
 	const response7Days = await fetch(apiUrl7Days); //Permintaan HTTP ke API untuk mendapatkan data cuaca
     var data7Days = await response7Days.json();
-	document.getElementById("loading").innerHTML = "";
+	document.getElementById("loading").style.display = "none";
     
     // ===== Menampilkan  Tanggal Pada Setiap Card ===== //
     const dateString7Days = data7Days.daily.time; 
