@@ -137,6 +137,7 @@ section{
     animation: spin 2s linear infinite;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 70px;
   }
   
   @keyframes spin {
